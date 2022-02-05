@@ -1,0 +1,19 @@
+{
+    "@@locale": "en",
+    "days": "Days",
+    "@days": {
+        "description": "Text shown above the days counter"
+    },
+    "hours": "Hours",
+    "@hours": {
+        "description": "Text shown above the hours counter"
+    },
+    "minutes": "Minutes",
+    "@minutes": {
+        "description": "Text shown above the minutes counter"
+    },
+    "seconds": "Seconds",
+    "@seconds": {
+        "description": "Text shown above the seconds counter"
+    }
+}
