@@ -10,10 +10,24 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:halazoni_timer/l10n/l10n.dart';
+import 'package:halazoni_timer/resources/imgaes.dart';
 import 'package:halazoni_timer/timer/timer.dart';
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    precacheImage(Image.asset(AppImages.backgroundImage).image, context);
+    precacheImage(Image.asset(AppImages.bouncingImage).image, context);
+  }
 
   @override
   Widget build(BuildContext context) {

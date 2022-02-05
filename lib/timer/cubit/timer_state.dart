@@ -25,7 +25,13 @@ class TimerState extends Equatable {
   static DateTime get _arrivalDate =>
       DateTime(2022, DateTime.february, 24, 17, 20);
   static DateTime get _currentDate => DateTime.now();
-  Duration get differenceDuration => _arrivalDate.difference(_currentDate);
+  Duration get differenceDuration {
+    if (_arrivalDate.isAfter(_currentDate)) {
+      return _arrivalDate.difference(_currentDate);
+    } else {
+      return _currentDate.difference(_currentDate);
+    }
+  }
 
   TimerState copyWith({
     int? days,
