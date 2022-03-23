@@ -22,8 +22,7 @@ class TimerState extends Equatable {
   final int minutes;
   final int seconds;
 
-  static DateTime get _arrivalDate =>
-      DateTime(2022, DateTime.february, 24, 17, 20);
+  static DateTime get _arrivalDate => DateTime(2022, DateTime.april, 18, 7, 45);
   static DateTime get _currentDate => DateTime.now();
   Duration get differenceDuration {
     if (_arrivalDate.isAfter(_currentDate)) {
